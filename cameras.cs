@@ -14,14 +14,14 @@ public class cameras : MonoBehaviour
     void Start()
     {
         mouse.x = 0.5f;
-        mouse.y = -0.5f;
+        mouse.y = -0.2f;
 
     }
 
     void Update()
     {
         mouse += new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")) * Time.deltaTime * spinSpeed;
-        mouse.y = Mathf.Clamp(mouse.y, -0.3f + 0.5f, 0.3f + 0.5f);
+        mouse.y = Mathf.Clamp(mouse.y, -0.05f + 0.5f, 0.3f + 0.25f);//視界角度設定
 
         // 球面座標系変換
         pos.x = distance * Mathf.Sin(mouse.y * Mathf.PI) * Mathf.Cos(mouse.x * Mathf.PI);

@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: f7b637179f7399d4c83530d831409878
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: game-UDMincho
+  fontNames:
+  - game-UDMincho
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 7930a24a040196d48a6464700b56f955, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

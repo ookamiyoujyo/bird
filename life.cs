@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class life : MonoBehaviour
 {
     private float timeleft;
-    Slider slider;
+    private Slider slider;
+    public GameObject my;
+    public GameObject gamemanager;
     void Start()
     {
         // スライダーを取得する
@@ -14,6 +16,7 @@ public class life : MonoBehaviour
     }
 
     float hp = 1000;
+    float power = 1f;
     void Update()
     {
         timeleft -= Time.deltaTime;
@@ -21,14 +24,31 @@ public class life : MonoBehaviour
         {
             timeleft = 0.01f;
             // HP減少
-            hp -= 1f;
+            hp -= power;
             if (hp < 0)
             {
-                // 最大を超えたら0に戻す
+                gamemanager.GetComponent<gameover>().endflag();
+                my.GetComponent<animation>().gameover();
                 hp = 0;
             }
         }
         // HPゲージに値を設定
         slider.value = hp;
+    }
+    public void get()
+    {
+        my.GetComponent<animation>().eat();
+        hp = 1000;
+    }
+
+    public void dei()
+    {
+        power = 0;
+    }
+    public void sta()
+    {
+        Debug.Log("9");
+            power = 1f;
+      
     }
 }
